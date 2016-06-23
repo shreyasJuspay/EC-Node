@@ -1,0 +1,55 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'adduser' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 verbose adduser before first PUT { _id: 'org.couchdb.user:juspay',
+4 verbose adduser   name: 'juspay',
+4 verbose adduser   password: 'XXXXX',
+4 verbose adduser   email: 'ec@juspay.in',
+4 verbose adduser   type: 'user',
+4 verbose adduser   roles: [],
+4 verbose adduser   date: '2016-06-23T12:16:55.855Z' }
+5 verbose request uri https://registry.npmjs.org/-/user/org.couchdb.user:juspay
+6 verbose request new user, so can't send auth
+7 info attempt registry request try #1 at 5:46:55 PM
+8 verbose request id 0bed9dcb4492ea12
+9 http request PUT https://registry.npmjs.org/-/user/org.couchdb.user:juspay
+10 http 400 https://registry.npmjs.org/-/user/org.couchdb.user:juspay
+11 verbose headers { 'content-type': 'application/json',
+11 verbose headers   'cache-control': 'max-age=300',
+11 verbose headers   'content-length': '57',
+11 verbose headers   'accept-ranges': 'bytes',
+11 verbose headers   date: 'Thu, 23 Jun 2016 12:16:57 GMT',
+11 verbose headers   via: '1.1 varnish',
+11 verbose headers   connection: 'keep-alive',
+11 verbose headers   'x-served-by': 'cache-sin6921-SIN',
+11 verbose headers   'x-cache': 'MISS',
+11 verbose headers   'x-cache-hits': '0',
+11 verbose headers   'x-timer': 'S1466684216.129441,VS0,VE880',
+11 verbose headers   vary: 'Accept-Encoding' }
+12 verbose request invalidating /home/shreyas/.npm/registry.npmjs.org/-/user/org.couchdb.user_3Ajuspay on PUT
+13 verbose adduser back [ { [Error: Unknown error while authenticating : -/user/org.couchdb.user:juspay] statusCode: 400, code: 'E400' },
+13 verbose adduser   { ok: false, error: 'Unknown error while authenticating' },
+13 verbose adduser   '{"ok":false,"error":"Unknown error while authenticating"}' ]
+14 verbose stack Error: Unknown error while authenticating : -/user/org.couchdb.user:juspay
+14 verbose stack     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+14 verbose stack     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+14 verbose stack     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+14 verbose stack     at Request.self.callback (/usr/share/npm/node_modules/request/request.js:198:22)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at Request.emit (events.js:172:7)
+14 verbose stack     at Request.<anonymous> (/usr/share/npm/node_modules/request/request.js:1082:10)
+14 verbose stack     at emitOne (events.js:82:20)
+14 verbose stack     at Request.emit (events.js:169:7)
+14 verbose stack     at IncomingMessage.<anonymous> (/usr/share/npm/node_modules/request/request.js:1009:12)
+15 verbose statusCode 400
+16 verbose cwd /home/shreyas/Desktop/juspay/ec-node/expresscheckout
+17 error Linux 4.4.0-24-generic
+18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "adduser"
+19 error node v4.2.6
+20 error npm  v3.5.2
+21 error code E400
+22 error Unknown error while authenticating : -/user/org.couchdb.user:juspay
+23 error If you need help, you may report this error at:
+23 error     <https://github.com/npm/npm/issues>
+24 verbose exit [ 1, true ]
